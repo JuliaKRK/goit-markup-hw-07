@@ -57,6 +57,17 @@ button {
   text-decoration: none;
 }
 
+.sec-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+  margin-bottom: 72px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -226,7 +237,7 @@ button {
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
 
     opacity: 0;
     visibility: hidden;
@@ -805,12 +816,12 @@ button {
     margin-bottom: 72px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 479px) {
   .advanteges {
     padding-top: 96px;
     padding-bottom: 96px;
   }
-  .title {
+  .title-ad {
     margin-bottom: 8px;
     font-weight: 700;
     font-size: 36px;
@@ -848,7 +859,7 @@ button {
   .ad-list-item {
     flex-basis: calc((100% - 24px) / 2);
   }
-  .title {
+  .title-ad {
     text-align: left;
     letter-spacing: 0.02em;
   }
@@ -889,7 +900,12 @@ button {
     color: #2e2f42;
     margin-bottom: 8px;
   }
-
+  .title-ad {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
   .advanteges-text {
     font-weight: 400;
     font-size: 16px;
@@ -911,16 +927,6 @@ button {
     gap: 24px;
   }
 
-  .sec-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: #2e2f42;
-    margin-bottom: 72px;
-  }
   .doing-content {
     flex-basis: calc(100% - 48px / 3);
     border: 1px solid #e7e9fc;
@@ -928,6 +934,73 @@ button {
 }
 /* /Section What Are We Doing */
 
+/* Team-Mobil */
+@media screen and (min-width: 480px), (max-width: 479px) {
+  .team-sect {
+    background: #f4f4fd;
+  }
+  .team-container {
+    padding-top: 96px;
+    padding-bottom: 128px;
+    width: 100%;
+  }
+  .team-list {
+    display: flex;
+    row-gap: 72px;
+    flex-wrap: wrap;
+  }
+  .team-nome {
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--primary-white-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .team-content {
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .team-content {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    text-align: center;
+  }
+  .social-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+  }
+  .social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    fill: #f4f4fd;
+    transition: background-color var(--transition);
+  }
+  .social-list-link:hover,
+  .social-list-link:focus {
+    background-color: #404bbf;
+  }
+}
+/* /Team Mobil */
+
+/* Team-Tablett */
+
+/* padding-top: 96px;
+padding-bottom: 128px;  */
+
+/* /Team Tablett */
 /* Section Our Team */
 
 /* .team-list {
