@@ -948,6 +948,9 @@ button {
     display: flex;
     row-gap: 72px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-basis: calc(100% - 48px / 2);
   }
   .team-nome {
     margin-left: auto;
@@ -997,65 +1000,187 @@ button {
 
 /* Team-Tablett */
 
-/* padding-top: 96px;
-padding-bottom: 128px;  */
+@media screen and (min-width: 768px) {
+  .team-sect {
+    background: #f4f4fd;
+  }
+  .team-container {
+    padding-top: 96px;
+    padding-bottom: 104px;
+    /* flex-basis: calc((100% - 24px) / 2); */
+  }
+  /* .team-img {
+    position: relative;
+    align-items: center;
+    align-content: center;
+  } */
+  .team-list {
+    margin-left: 0;
+    margin-right: 0;
 
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+    justify-content: center;
+    align-items: center;
+  }
+  .team-nome {
+    margin-left: 0;
+    margin-right: 0;
+    background: var(--primary-white-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  .team-content {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    text-align: center;
+  }
+  .advanteges-text {
+    font-weight: 400;
+    margin-top: 8px;
+  }
+  .social-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+  }
+  .social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    fill: #f4f4fd;
+    transition: background-color var(--transition);
+  }
+  .social-list-link:hover,
+  .social-list-link:focus {
+    background-color: #404bbf;
+  }
+}
 /* /Team Tablett */
-/* Section Our Team */
 
-/* .team-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.team-nome {
-  background: #ffffff;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
-}
-.team-content {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 16px;
-  padding-right: 16px;
-  justify-content: center;
-  text-align: center;
+/* Team Desktop */
+@media screen and (min-width: 768px) {
+  .team-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .team-nome {
+    background: #ffffff;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .team-content {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .team-sect {
+    background: #f4f4fd;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .social-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+  }
+  .social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    fill: #f4f4fd;
+    transition: background-color var(--transition);
+  }
+  .social-list-link:hover,
+  .social-list-link:focus {
+    background-color: #404bbf;
+  }
 }
 
-.team-sect {
-  background: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.social-list {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 8px;
-}
-.social-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #4d5ae5;
-  fill: #f4f4fd;
-  transition: background-color var(--transition);
-}
-.social-list-link:hover,
-.social-list-link:focus {
-  background-color: #404bbf;
-} */
-
-/* /Section Our Team */
+/* /Team Desktop */
 
 /* Customers */
+@media screen and (min-width: 480px), (max-width: 479px) {
+  .customers {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    width: 100%;
+  }
+  .sec-title {
+    margin-bottom: 72px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
 
+    text-transform: capitalize;
+
+    color: var(--title-text-color);
+  }
+  .customers-list {
+    display: flex;
+    row-gap: 72px;
+    column-gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 88px;
+
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+
+    transition: border-color var(--transition-dur-and-cub);
+  }
+  .customers-icon {
+    transition: fill var(--transition-dur-and-cub);
+
+    fill: var(--light-slate-ubtle-text-color);
+  }
+
+  .customers-link:focus,
+  .customers-link:hover {
+    border-color: #404bbf;
+  }
+
+  .customers-link:focus .customers-icon,
+  .customers-link:hover .customers-icon {
+    fill: #404bbf;
+  }
+  .customers-icon {
+    fill: #8e8f99;
+    transition: fill var(--transition);
+  }
+}
 /* .customers {
   padding-top: 130px;
   padding-bottom: 120px;
