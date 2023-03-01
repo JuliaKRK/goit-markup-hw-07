@@ -79,13 +79,6 @@ button {
   clip: rect(0 0 0 0);
 }
 
-/* .container {
-  width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-} */
 /* components */
 
 .button {
@@ -167,7 +160,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 736px;
+    max-width: 736px;
   }
   .mobile-menu {
     display: none;
@@ -178,7 +171,7 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1160px;
+    max-width: 1160px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -262,8 +255,8 @@ button {
     height: 100%;
   }
   .mobile-menu_close-btn {
-    background-color: transparent;
-    border: none;
+    background: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     line-height: 0;
     position: absolute;
@@ -277,9 +270,6 @@ button {
     align-items: center;
     cursor: pointer;
 
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 0;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -763,46 +753,6 @@ button {
 }
 /* /Hero Desktop */
 
-/* .hero {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #2e2f42;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/people-office.jpg);
-
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  color: #ffffff;
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-  background: #404bbf;
-}
-
-.mein-title {
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 48px;
-  width: 496px;
-}
-
-.hero-content {
-  text-align: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
-} */
-
 /* Section Advanteges */
 
 /*  Advantages Mobil*/
@@ -811,12 +761,11 @@ button {
     display: none;
   }
 }
+
 @media screen and (max-width: 767px) {
   .ad-list-item:not(:last-child) {
     margin-bottom: 72px;
   }
-}
-@media screen and (min-width: 480px), (max-width: 479px) {
   .advanteges {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -850,6 +799,10 @@ button {
 /* Advantages Tablett */
 
 @media screen and (min-width: 768px) {
+  .advanteges {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
   .advanteges-list {
     display: flex;
     flex-wrap: wrap;
@@ -862,6 +815,18 @@ button {
   .title-ad {
     text-align: left;
     letter-spacing: 0.02em;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-transform: capitalize;
+  }
+  .advanteges-text {
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
   }
 }
 /* /Advantages Tablett */
@@ -871,7 +836,6 @@ button {
 @media screen and (min-width: 1200px) {
   .advanteges {
     padding-top: 120px;
-    padding-bottom: 120px;
   }
 
   .advanteges-list {
@@ -911,6 +875,7 @@ button {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    color: var(--primary-text-color);
   }
 }
 /* /Advantages Desktop */
@@ -928,74 +893,81 @@ button {
   }
 
   .doing-content {
-    flex-basis: calc(100% - 48px / 3);
+    flex-basis: calc((100% - 48px) / 3);
     border: 1px solid #e7e9fc;
   }
 }
 /* /Section What Are We Doing */
 
 /* Team-Mobil */
-@media screen and (min-width: 480px), (max-width: 479px) {
-  .team-sect {
-    background: #f4f4fd;
-  }
-  .team-container {
-    padding-top: 96px;
-    padding-bottom: 128px;
-    width: 100%;
-  }
-  .team-list {
-    display: flex;
-    row-gap: 72px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    flex-basis: calc(100% - 48px / 2);
-  }
-  .team-nome {
-    margin-left: auto;
-    margin-right: auto;
-    background: var(--primary-white-color);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
-  }
-  .team-content {
-    text-align: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
 
-  .team-content {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
-    justify-content: center;
-    text-align: center;
-  }
-  .social-list {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 8px;
-  }
-  .social-list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #4d5ae5;
-    fill: #f4f4fd;
-    transition: background-color var(--transition);
-  }
-  .social-list-link:hover,
-  .social-list-link:focus {
-    background-color: #404bbf;
-  }
+.team-sect {
+  background: #f4f4fd;
+  padding-top: 96px;
+  padding-bottom: 128px;
+  width: 100%;
 }
+
+.team-list {
+  display: flex;
+  row-gap: 72px;
+  flex-wrap: wrap;
+}
+.team-nome {
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--primary-white-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  /* flex-basis: calc((100% - 48px) / 2); */
+}
+.team-content {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.advanteges-text-team {
+  margin-top: 8px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  text-align: center;
+  color: var(--primary-text-color);
+}
+/* .team-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  justify-content: center;
+  text-align: center;
+} */
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  fill: #f4f4fd;
+  transition: background-color var(--transition);
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: #404bbf;
+}
+
 /* /Team Mobil */
 
 /* Team-Tablett */
@@ -1003,17 +975,9 @@ button {
 @media screen and (min-width: 768px) {
   .team-sect {
     background: #f4f4fd;
-  }
-  .team-container {
     padding-top: 96px;
     padding-bottom: 104px;
-    /* flex-basis: calc((100% - 24px) / 2); */
   }
-  /* .team-img {
-    position: relative;
-    align-items: center;
-    align-content: center;
-  } */
   .team-list {
     margin-left: 0;
     margin-right: 0;
@@ -1028,50 +992,26 @@ button {
   .team-nome {
     margin-left: 0;
     margin-right: 0;
-    background: var(--primary-white-color);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
   }
 
   .team-content {
-    padding-top: 32px;
-    padding-bottom: 32px;
     padding-left: 16px;
     padding-right: 16px;
     justify-content: center;
     text-align: center;
   }
-  .advanteges-text {
-    font-weight: 400;
-    margin-top: 8px;
-  }
-  .social-list {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 8px;
-  }
-  .social-list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #4d5ae5;
-    fill: #f4f4fd;
-    transition: background-color var(--transition);
-  }
-  .social-list-link:hover,
-  .social-list-link:focus {
-    background-color: #404bbf;
-  }
 }
 /* /Team Tablett */
 
 /* Team Desktop */
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 1200px) {
+  .team-sect {
+    background: #f4f4fd;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   .team-list {
     list-style: none;
     display: flex;
@@ -1091,12 +1031,6 @@ button {
     padding-right: 16px;
     justify-content: center;
     text-align: center;
-  }
-
-  .team-sect {
-    background: #f4f4fd;
-    padding-top: 120px;
-    padding-bottom: 120px;
   }
 
   .social-list {
@@ -1125,7 +1059,8 @@ button {
 /* /Team Desktop */
 
 /* Customers */
-@media screen and (min-width: 480px), (max-width: 479px) {
+
+/* @media screen and (min-width: 480px), (max-width: 479px) {
   .customers {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -1180,7 +1115,7 @@ button {
     fill: #8e8f99;
     transition: fill var(--transition);
   }
-}
+} */
 /* .customers {
   padding-top: 130px;
   padding-bottom: 120px;
