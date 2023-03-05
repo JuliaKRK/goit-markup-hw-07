@@ -58,14 +58,8 @@ button {
 }
 
 .sec-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: #2e2f42;
-  margin-bottom: 72px;
 }
 
 .visually-hidden {
@@ -178,6 +172,11 @@ button {
     display: none;
   }
 }
+@media screen and (max-width: 767px) {
+  .ad-list-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+}
 /* Header */
 
 @media screen and (max-width: 767px) {
@@ -250,14 +249,7 @@ button {
   .mobile-menu-nav {
     margin-bottom: auto;
   }
-  /* .mobile-menu_container {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 80px;
-    padding-bottom: 40px;
-    padding-left: 40px;
-  } */
+
   .mobile-menu_close-btn {
     background: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -467,13 +459,6 @@ button {
 
 @media screen and (min-width: 1200px) {
   .logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.33;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #2e2f42;
     margin-right: 76px;
   }
   .logo-color {
@@ -496,23 +481,6 @@ button {
 
   /* Nav */
 
-  .menu {
-    display: flex;
-    align-items: center;
-  }
-  .menu-item:not(:last-child) {
-    margin-right: 40px;
-  }
-  .menu-link {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    transition: color var(--transition);
-  }
-  .menu-link:hover,
-  .menu-link:focus,
   .menu-link:active {
     color: var(--okean-color);
   }
@@ -548,24 +516,8 @@ button {
     color: var(--okean-color);
   }
 
-  .studio-bottom {
-    position: relative;
-    color: var(--okean-color);
-  }
-
   .studio-bottom::after {
-    display: inline-block;
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
     transform: translate(0, 24px);
-
-    width: 48px;
-    height: 4px;
-
-    background: var(--okean-color);
-    border-radius: 2px;
   }
   .portfolio-bottom {
     position: relative;
@@ -653,6 +605,7 @@ button {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #2e2f42;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -662,9 +615,9 @@ button {
     background-position: center;
     background-size: cover;
   }
-  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
-    screen and (min-resolution: 192dpi) and (max-width: 767px),
-    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px),
+    screen and (min-resolution: 192dpi) and (max-width: 1199px),
+    screen and (min-resolution: 2dppx) and (max-width: 1199px) {
     .hero {
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
@@ -683,6 +636,7 @@ button {
     padding-bottom: 108px;
   }
   .mein-title {
+    font-weight: 700;
     width: 496px;
     font-size: 56px;
     line-height: 1.07;
@@ -707,18 +661,17 @@ button {
   }
   .hero {
     max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #2e2f42;
+    background-position: 50% 50%;
+    color: #ffffff;
+
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/bg-desktop.jpg);
-
-    background-position: 50% 50%;
     background-repeat: no-repeat;
-    color: #ffffff;
+    background-position: center;
+    background-size: cover;
   }
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
     screen and (min-resolution: 192dpi) and (min-width: 1200px),
@@ -737,16 +690,7 @@ button {
   }
 
   .mein-title {
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    text-align: center;
-    letter-spacing: 0.02em;
-    color: #ffffff;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 48px;
-    width: 496px;
   }
 
   .hero-content {
@@ -766,47 +710,39 @@ button {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .ad-list-item:not(:last-child) {
-    margin-bottom: 72px;
-  }
-  .advanteges {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
-  .title-ad {
-    margin-bottom: 8px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--title-text-color);
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-  }
-  .advanteges-text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color);
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-  }
+.advanteges {
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
+.title-ad {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--title-text-color);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.advanteges-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
 /* Advantages Tablett */
 
 @media screen and (min-width: 768px) {
-  .advanteges {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
   .advanteges-list {
     display: flex;
     flex-wrap: wrap;
@@ -818,19 +754,9 @@ button {
   }
   .title-ad {
     text-align: left;
-    letter-spacing: 0.02em;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    text-transform: capitalize;
   }
   .advanteges-text {
     margin-top: 8px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
   }
 }
 /* /Advantages Tablett */
@@ -840,15 +766,12 @@ button {
 @media screen and (min-width: 1200px) {
   .advanteges {
     padding-top: 120px;
-  }
-
-  .advanteges-list {
-    display: flex;
-    column-gap: 24px;
+    padding-bottom: 120px;
   }
 
   .ad-list-item {
     flex-basis: calc((100% - 72px) / 4);
+    margin-bottom: 0;
   }
   .advanteges-style {
     display: flex;
@@ -942,14 +865,7 @@ button {
   text-align: center;
   color: var(--primary-text-color);
 }
-/* .team-content {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 16px;
-  padding-right: 16px;
-  justify-content: center;
-  text-align: center;
-} */
+
 .social-list {
   display: flex;
   justify-content: center;
@@ -978,16 +894,12 @@ button {
 
 @media screen and (min-width: 768px) {
   .team-sect {
-    background: #f4f4fd;
     padding-top: 96px;
     padding-bottom: 104px;
   }
   .team-list {
     margin-left: 0;
     margin-right: 0;
-
-    display: flex;
-    flex-wrap: wrap;
     row-gap: 64px;
     column-gap: 24px;
     justify-content: center;
@@ -1011,7 +923,6 @@ button {
 
 @media screen and (min-width: 1200px) {
   .team-sect {
-    background: #f4f4fd;
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -1028,38 +939,7 @@ button {
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
   }
-  .team-content {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .social-list {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 8px;
-  }
-  .social-list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #4d5ae5;
-    fill: #f4f4fd;
-    transition: background-color var(--transition);
-  }
-  .social-list-link:hover,
-  .social-list-link:focus {
-    background-color: #404bbf;
-  }
 }
-
 /* /Team Desktop */
 
 /* Customers */
@@ -1089,9 +969,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-/* .customers-iton {
-  flex-basis: calc((100% - 16px) / 2);
-} */
+
 .customers-link {
   display: flex;
   justify-content: center;
@@ -1102,12 +980,7 @@ button {
   border: 1px solid #8e8f99;
   border-radius: 4px;
 
-  transition: border-color var(--transition-dur-and-cub);
-}
-.customers-icon {
-  transition: fill var(--transition-dur-and-cub);
-
-  fill: var(--light-slate-ubtle-text-color);
+  transition: border-color var(--transition);
 }
 
 .customers-link:focus,
@@ -1126,17 +999,8 @@ button {
 
 /* Customers Tablett */
 @media screen and (min-width: 768px) {
-  .customers {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
   .customers-list {
-    display: flex;
-    row-gap: 72px;
     column-gap: 24px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
   }
   .customers-link {
     width: 168px;
@@ -1152,7 +1016,6 @@ button {
     padding-bottom: 120px;
   }
   .customers-list {
-    display: flex;
     gap: 24px;
   }
 
@@ -1160,26 +1023,9 @@ button {
     flex-basis: calc((100% - 24px * 5) / 6);
   }
   .customers-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 168px;
     height: 88px;
-    border: 1px solid #8e8f99;
-    border-radius: 4px;
     transition: border-color var(--transition), fill var(--transition);
-  }
-  .customers-link:hover,
-  .customers-link:focus {
-    border-color: #404bbf;
-  }
-  .customers-link:hover .customers-icon,
-  .customers-link:focus .customers-icon {
-    fill: #404bbf;
-  }
-  .customers-icon {
-    fill: #8e8f99;
-    transition: fill var(--transition);
   }
 }
 /* /Customers Desktop */
@@ -1400,13 +1246,6 @@ button {
     color: #f4f4fd;
     margin-bottom: 16px;
   }
-  .description-footer {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #e7e9fc;
-  }
   .footer-text {
     width: 264px;
     margin-top: 16px;
@@ -1418,8 +1257,6 @@ button {
   }
 
   .footer-form {
-    display: flex;
-    justify-content: center;
     gap: 24px;
   }
 
