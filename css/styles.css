@@ -273,10 +273,6 @@ button {
     border-radius: 50%;
   }
 
-  .contacts-mob-menu {
-    margin-left: auto;
-    margin-right: auto;
-  }
   .menu-link {
     display: block;
     font-weight: 700;
