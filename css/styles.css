@@ -287,11 +287,12 @@ button {
     transition: color var(--transition);
   }
   .menu-link:focus,
-  .tel-mob-menu:focus,
   .email-mob-menu:focus {
     color: var(--okean-color);
   }
-
+  .tel-mob-menu:focus {
+    color: var(--accent-color);
+  }
   .menu-item:not(:last-child) {
     margin-bottom: 40px;
   }
