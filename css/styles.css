@@ -191,7 +191,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    max-width: 736px;
   }
   .style-heder {
     padding-top: 24px;
@@ -270,9 +270,15 @@ button {
     height: 24px;
     border-radius: 50%;
   }
+  .mobile-menu_close-btn:focus {
+    background-color: var(--okean-color);
+  }
+  .mobile-menu_close-btn:focus .mobile-menu_close-icon {
+    fill: var(--primary-white-color);
+  }
 
   .menu-link {
-    display: block;
+    /* display: block; */
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -280,7 +286,9 @@ button {
 
     transition: color var(--transition);
   }
-  .menu-link:focus {
+  .menu-link:focus,
+  .tel-mob-menu:focus,
+  .email-mob-menu:focus {
     color: var(--okean-color);
   }
 
@@ -288,7 +296,7 @@ button {
     margin-bottom: 40px;
   }
 
-  .mobile-menu-contacts {
+  .studio-bottom {
     color: var(--okean-color);
   }
   .tel-mob-menu {
@@ -298,7 +306,7 @@ button {
     letter-spacing: 0.02em;
     text-transform: capitalize;
 
-    color: #4d5ae5;
+    color: var(--title-text-color);
     transition: color var(--transition);
   }
   .email-mob-menu {
@@ -1208,6 +1216,7 @@ button {
     width: 264px;
     height: 40px;
     margin-right: 24px;
+    margin-bottom: 0;
   }
   .subscribe-block {
     margin-top: 0;
