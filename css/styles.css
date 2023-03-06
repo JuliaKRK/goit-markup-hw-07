@@ -1044,10 +1044,10 @@ button {
 /* Footer Mobil */
 .main-footer {
   background-color: #2e2f42;
-}
-.footer-content {
   padding-top: 96px;
   padding-bottom: 96px;
+}
+.footer-content {
   margin-left: auto;
   margin-right: auto;
 }
@@ -1237,7 +1237,7 @@ button {
 
 /* Footer Desktop */
 @media screen and (min-width: 1200px) {
-  .footer-content {
+  .main-footer {
     padding-top: 100px;
     padding-bottom: 100px;
   }
